@@ -1,5 +1,7 @@
-import Image from "next/image";
+import { FC } from "react";
 
-export default function Home() {
+const Home: FC = () => {
   return <main>Hello</main>;
-}
+};
+
+export default Home;
