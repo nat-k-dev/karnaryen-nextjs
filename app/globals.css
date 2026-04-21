@@ -1,26 +1,109 @@
 @import 'tailwindcss';
 
+/* ─── Class-based dark mode ────────────────────────── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Primitive tokens ─────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --mint-50: #f0fbfb;
+  --mint-100: #dff6f5;
+  --mint-200: #b5eaea;
+  --mint-300: #8de0e0;
+  --mint-400: #5ecece;
+  --mint-500: #35baba;
+  --mint-600: #2a9696;
+  --mint-700: #1f7070;
+  --mint-800: #154b4b;
+  --mint-900: #0a2828;
+
+  --charcoal-50: #f5f5f5;
+  --charcoal-100: #e8e8e8;
+  --charcoal-200: #d0d0d0;
+  --charcoal-300: #b0b0b0;
+  --charcoal-400: #888888;
+  --charcoal-500: #666666;
+  --charcoal-600: #444444;
+  --charcoal-700: #3a3a3a;
+  --charcoal-800: #2e2e2e;
+  --charcoal-900: #1a1a1a;
+
+  --coral-100: #fdf0eb;
+  --coral-200: #fae0d6;
+  --coral-300: #f6c6b5;
+  --coral-400: #f0a888;
+  --coral-500: #e88a66;
 }
 
+/* ─── Semantic tokens — light ──────────────────────── */
+:root {
+  --background: var(--mint-50);
+  --surface: #ffffff;
+  --foreground: var(--charcoal-800);
+  --muted: var(--charcoal-500);
+  --primary: var(--mint-500);
+  --primary-text: var(--mint-700);
+  --accent: var(--coral-300);
+  --border: var(--mint-200);
+  --header-bg: #ffffff;
+  --nav-hover: color-mix(in srgb, var(--mint-200) 50%, transparent);
+  --header-shadow: 0 3px 8px color-mix(in srgb, var(--mint-200) 60%, transparent);
+}
+
+/* ─── Semantic tokens — dark ───────────────────────── */
+.dark {
+  --background: var(--charcoal-900);
+  --surface: var(--charcoal-800);
+  --foreground: var(--mint-50);
+  --muted: var(--charcoal-400);
+  --primary: var(--mint-300);
+  --primary-text: var(--mint-300);
+  --accent: var(--coral-300);
+  --border: var(--charcoal-700);
+  --header-bg: var(--charcoal-800);
+  --nav-hover: color-mix(in srgb, var(--mint-300) 15%, transparent);
+  --header-shadow: 0 3px 8px color-mix(in srgb, var(--charcoal-700) 80%, transparent);
+}
+
+/* ─── Tailwind v4 theme mapping ────────────────────── */
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-text: var(--primary-text);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-header-bg: var(--header-bg);
+  --color-nav-hover: var(--nav-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base styles ──────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Anchor offset for fixed header */
+:target::before {
+  content: '';
+  display: block;
+  height: 72px;
+  margin-top: -72px;
 }
