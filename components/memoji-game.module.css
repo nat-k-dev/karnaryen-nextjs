@@ -1,0 +1,156 @@
+.game {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cards {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 130px);
+  gap: 25px;
+  justify-content: center;
+  perspective: 600px;
+}
+
+.card {
+  height: 130px;
+  width: 130px;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 9px;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 0.5);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card.opened {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 9px;
+}
+
+.faceFront {
+  border: 5px solid #fff;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, #22ab93, #19668d);
+}
+
+.faceBack {
+  background: #fff;
+  transform: rotateY(180deg);
+}
+
+.success .faceBack {
+  background: #5ad66f;
+}
+
+.failure .faceBack {
+  background: #f44336;
+}
+
+.memoji {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.emoji1 .memoji { background: url('/projects/memoji/css_sprites.png') -10px -10px; }
+.emoji2 .memoji { background: url('/projects/memoji/css_sprites.png') -105px -10px; }
+.emoji3 .memoji { background: url('/projects/memoji/css_sprites.png') -10px -105px; }
+.emoji4 .memoji { background: url('/projects/memoji/css_sprites.png') -105px -105px; }
+.emoji5 .memoji { background: url('/projects/memoji/css_sprites.png') -200px -10px; }
+.emoji6 .memoji { background: url('/projects/memoji/css_sprites.png') -200px -105px; }
+
+.timer {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--foreground);
+}
+
+.message {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgb(0 0 0 / 0.5);
+}
+
+.messageBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 350px;
+  padding: 30px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.messageStatus {
+  display: flex;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #434344;
+}
+
+.messageLetter {
+  animation: changeLetterSize 0.5s ease-out infinite;
+}
+
+.messageBtn {
+  height: 40px;
+  padding: 0 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #19668d, #22ab93);
+  box-shadow: 1px 1px 1px #000;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+}
+
+.messageBtn:active {
+  box-shadow: inset 2px 1px 8px #000;
+}
+
+@keyframes changeLetterSize {
+  0%,
+  50%,
+  100% {
+    transform: translateY(10px) scaleY(1);
+  }
+  25% {
+    transform: translateY(-10px) scaleY(1.3);
+  }
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(3, 130px);
+  }
+}
+
+@media (max-width: 520px) {
+  .cards {
+    grid-template-columns: repeat(2, 130px);
+  }
+}

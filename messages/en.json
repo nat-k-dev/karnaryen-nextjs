@@ -182,6 +182,13 @@
       }
     }
   },
+  "MemojiGame": {
+    "cardLabel": "Card {number}",
+    "win": "Win",
+    "lose": "Lose",
+    "playAgain": "Play again",
+    "tryAgain": "Try again"
+  },
   "Footer": {
     "copyright": "© karnaryen.com 2026"
   }

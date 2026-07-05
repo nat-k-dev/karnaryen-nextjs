@@ -182,6 +182,13 @@
       }
     }
   },
+  "MemojiGame": {
+    "cardLabel": "Kaart {number}",
+    "win": "Gewonnen",
+    "lose": "Verloren",
+    "playAgain": "Opnieuw spelen",
+    "tryAgain": "Probeer opnieuw"
+  },
   "Footer": {
     "copyright": "© karnaryen.com 2026"
   }
