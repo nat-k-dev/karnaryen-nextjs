@@ -131,6 +131,21 @@
     "title": "Opleiding"
   },
   "ContactsPage": {
-    "title": "Contact"
+    "title": "Contact",
+    "intro": "Neem gerust contact op — ik hoor graag van je.",
+    "links": {
+      "github": {
+        "label": "GitHub"
+      },
+      "email": {
+        "label": "E-mail"
+      },
+      "linkedin": {
+        "label": "LinkedIn"
+      }
+    }
+  },
+  "Footer": {
+    "copyright": "© karnaryen.com 2026"
   }
 }

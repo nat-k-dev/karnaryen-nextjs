@@ -131,6 +131,21 @@
     "title": "Education"
   },
   "ContactsPage": {
-    "title": "Contacts"
+    "title": "Contacts",
+    "intro": "Feel free to reach out — I'm always happy to connect.",
+    "links": {
+      "github": {
+        "label": "GitHub"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "linkedin": {
+        "label": "LinkedIn"
+      }
+    }
+  },
+  "Footer": {
+    "copyright": "© karnaryen.com 2026"
   }
 }
