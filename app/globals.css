@@ -61,3 +61,27 @@
     @apply font-sans;
   }
 }
+
+/* Staggered reveal for card grids (see components/reveal-grid.tsx).
+   Items stay hidden only once JS has armed the grid, so content is
+   never lost without JavaScript. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-grid[data-armed] > * {
+    opacity: 0;
+  }
+  .reveal-grid[data-revealed] > * {
+    animation: reveal-rise 0.55s ease-out both;
+    animation-delay: calc(var(--reveal-index, 0) * 90ms);
+  }
+}
+
+@keyframes reveal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

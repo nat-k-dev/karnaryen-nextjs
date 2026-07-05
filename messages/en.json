@@ -21,7 +21,8 @@
     "label": "Toggle theme"
   },
   "Common": {
-    "comingSoon": "Content coming soon."
+    "comingSoon": "Content coming soon.",
+    "goBack": "Go back"
   },
   "AboutPage": {
     "title": "About me",
@@ -33,6 +34,8 @@
   },
   "ProjectsPage": {
     "title": "Projects",
+    "workProjects": "Work projects",
+    "selfStudyProjects": "Self-study projects",
     "confidential": "Confidential",
     "readMore": "Read more...",
     "open": "Open",
@@ -57,6 +60,40 @@
         "imageAlt": "Screenshots of the S2S Platform on desktop, tablet, and phone",
         "summary": "Neolook's S2S Platform is a system that brings together video and AI solutions for neonatal and pediatric intensive care (NICU and PICU). It offers different modules with specific goals: S2S Family helps parents stay connected with their child, S2S Professional supports nurses and doctors with clinical monitoring and consultation, and S2S Academic provides tools for clinical research.",
         "contribution": "Over the last three years, I was mainly responsible for developing the frontend of the S2S Platform. My work included implementing new features, pages, and components, ensuring they were responsive and reliable, and making sure the frontend communicated smoothly and effectively with the backend. As the project grew more complex, I also worked on the frontend architecture to make it scalable and maintainable. Among the features I implemented were real-time camera status updates (SSE), grid and list views for camera monitoring (for both nurse stations and care telephones), a web interface for multi-person video calls, feature access and URL protection based on license type (Family, Professional, or Academic), and light/dark modes. I collaborated closely with designers, backend developers, the solution architect, and management, working in sprints with regular demos and sprint planning in Jira."
+      }
+    },
+    "selfStudy": {
+      "schoolLibrary": {
+        "caption": "School library app",
+        "description": "Password-protected app for registering and lending library books."
+      },
+      "techBlogVue": {
+        "caption": "Tech blog",
+        "description": "Small blog with articles about web development."
+      },
+      "ticTacToe": {
+        "caption": "Tic-tac-toe",
+        "description": "Classic tic-tac-toe game for two players."
+      },
+      "onlineStore": {
+        "caption": "Online store",
+        "description": "Demo chocolate shop with a product catalog."
+      },
+      "multiLanguage": {
+        "caption": "Multi-language page",
+        "description": "Piano lessons landing page with a language switcher."
+      },
+      "deliveryCompany": {
+        "caption": "Delivery company website",
+        "description": "Frontend for a cargo delivery company."
+      },
+      "parallaxTailwind": {
+        "caption": "Parallax effect",
+        "description": "Scrolling parallax demo built in Tailwind Play."
+      },
+      "memoji": {
+        "caption": "Memoji game",
+        "description": "Memory game with emoji pairs and a timer."
       }
     }
   },
