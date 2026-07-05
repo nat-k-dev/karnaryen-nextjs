@@ -32,7 +32,33 @@
     "techStackTitle": "Tech stack"
   },
   "ProjectsPage": {
-    "title": "Projects"
+    "title": "Projects",
+    "confidential": "Confidential",
+    "readMore": "Read more...",
+    "open": "Open",
+    "techStackLabel": "Tech stack:",
+    "browsersLabel": "Developed for browsers:",
+    "demoNote": "Demo mode: videostreams are replaced with stock videos",
+    "projects": {
+      "earlyMoves": {
+        "title": "Neolook Early Moves",
+        "imageAlt": "Screenshot of the Early Moves application interface",
+        "summary": "Early Moves is a software solution to support healthcare professionals and parents in capturing and analyzing infants movements remotely, helping to detect developmental conditions early and provide better care for high-risk or premature babies.",
+        "contribution": "I joined the Early Moves project at its start in January 2023, where I was responsible for building the entire frontend while other team members handled the backend. I translated Figma designs into a scalable, responsive Angular application (v15-v18) using Tailwind CSS, and implemented features such as login, video recording, and translation. I also optimized the application for mobile, tablet, desktop, and wide-screen devices and created reliable email templates."
+      },
+      "mmcFlyer": {
+        "title": "Máxima MC Information Flyer",
+        "imageAlt": "Screenshot of the Máxima MC information flyer webpage",
+        "summary": "This project is an informational webpage created to help parents prepare before using S2S Family, the software for watching their baby in the NICU. The page provides a clear overview of the software, testimonials from other parents, detailed instructions on installation, and a FAQ section. Its goal is to make it easier for parents to understand and use the system confidently.",
+        "contribution": "I developed the Máxima MC Information Flyer webpage for Neolook and Máxima MC hospital in April 2023. I implemented language auto-detection so the page can be viewed in Dutch or English. To make content management easier for Neolook team members, I used Strapi to store publicly available text for the FAQ and testimonials sections. I ensured the page works well on both mobile and desktop screens and added CSS animations to make the interface more user-friendly."
+      },
+      "s2sPlatform": {
+        "title": "Neolook S2S Platform",
+        "imageAlt": "Screenshots of the S2S Platform on desktop, tablet, and phone",
+        "summary": "Neolook's S2S Platform is a system that brings together video and AI solutions for neonatal and pediatric intensive care (NICU and PICU). It offers different modules with specific goals: S2S Family helps parents stay connected with their child, S2S Professional supports nurses and doctors with clinical monitoring and consultation, and S2S Academic provides tools for clinical research.",
+        "contribution": "Over the last three years, I was mainly responsible for developing the frontend of the S2S Platform. My work included implementing new features, pages, and components, ensuring they were responsive and reliable, and making sure the frontend communicated smoothly and effectively with the backend. As the project grew more complex, I also worked on the frontend architecture to make it scalable and maintainable. Among the features I implemented were real-time camera status updates (SSE), grid and list views for camera monitoring (for both nurse stations and care telephones), a web interface for multi-person video calls, feature access and URL protection based on license type (Family, Professional, or Academic), and light/dark modes. I collaborated closely with designers, backend developers, the solution architect, and management, working in sprints with regular demos and sprint planning in Jira."
+      }
+    }
   },
   "ExperiencePage": {
     "title": "Experience"

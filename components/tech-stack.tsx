@@ -15,8 +15,8 @@ export function TechBadge({ id, size = 'md', className }: TechBadgeProps) {
   return (
     <span
       className={cn(
-        'flex items-center text-foreground',
-        size === 'md' ? 'flex-col gap-3 text-base sm:text-lg' : 'gap-2 text-sm',
+        'flex flex-col items-center text-foreground',
+        size === 'md' ? 'gap-3 text-base sm:text-lg' : 'gap-1.5 text-sm',
         className,
       )}
     >
@@ -25,7 +25,7 @@ export function TechBadge({ id, size = 'md', className }: TechBadgeProps) {
         alt=""
         width={64}
         height={64}
-        className={cn('w-auto', size === 'md' ? 'h-12 sm:h-16' : 'h-6')}
+        className={cn('w-auto', size === 'md' ? 'h-12 sm:h-16' : 'h-8 sm:h-10')}
       />
       {name}
     </span>
@@ -43,7 +43,7 @@ export function TechStack({ ids = techStackIds, size = 'md', className }: TechSt
     <ul
       className={cn(
         'flex flex-wrap items-end justify-center',
-        size === 'md' ? 'gap-x-8 gap-y-6 sm:gap-x-12' : 'gap-x-4 gap-y-2',
+        size === 'md' ? 'gap-x-8 gap-y-6 sm:gap-x-12' : 'gap-x-5 gap-y-3',
         className,
       )}
     >
