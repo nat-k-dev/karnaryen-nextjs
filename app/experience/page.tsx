@@ -2,7 +2,11 @@ import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-import { PagePlaceholder } from '@/components/page-placeholder';
+import {
+  ExperienceTimeline,
+  type ExperienceTimelineEntry,
+} from '@/components/experience-timeline';
+import { experienceItems } from '@/data/experience';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('ExperiencePage');
@@ -12,5 +16,19 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function ExperiencePage() {
   const t = useTranslations('ExperiencePage');
 
-  return <PagePlaceholder title={t('title')} />;
+  const entries: ExperienceTimelineEntry[] = experienceItems.map((item) => ({
+    ...item,
+    title: t(`timeline.${item.id}.title`),
+    period: t(`timeline.${item.id}.period`),
+    description: t(`timeline.${item.id}.description`).split('\n'),
+  }));
+
+  return (
+    <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
+      <h1 className="text-3xl font-semibold text-foreground">{t('title')}</h1>
+      <div className="mt-10">
+        <ExperienceTimeline entries={entries} />
+      </div>
+    </main>
+  );
 }

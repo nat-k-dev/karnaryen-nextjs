@@ -98,7 +98,34 @@
     }
   },
   "ExperiencePage": {
-    "title": "Ervaring"
+    "title": "Ervaring",
+    "timeline": {
+      "juniorEinstein": {
+        "title": "Frontend developer",
+        "period": "nov 2025 — heden",
+        "description": "UI-componenten en functionaliteit ontwikkeld voor een intern e-commerceplatform met React, Next.js, TypeScript en Tailwind CSS.\nHerbruikbare componenten gebouwd voor een gedeeld design system met shadcn/ui en Storybook (Button, Checkbox, Switch, Alert).\nProductkaarten en filterinterfaces voor de webshop geïmplementeerd.\nCode reviews uitgevoerd en tests geschreven met Vitest (unit) en Cypress (end-to-end) om de codekwaliteit te waarborgen.\nInternationalisatie onderzocht en meertalige ondersteuning geïmplementeerd."
+      },
+      "neolook": {
+        "title": "Frontend developer",
+        "period": "okt 2022 — sep 2025",
+        "description": "Frontendinterfaces ontwikkeld voor zorgplatforms gebruikt op neonatale en pediatrische intensive care afdelingen (NICU/PICU).\nFrontendarchitectuur ontworpen en geïmplementeerd voor meerdere Angular-applicaties; Figma-designs vertaald naar schaalbare, responsieve interfaces met TypeScript en Tailwind CSS.\nComplexe UI-functionaliteit ontwikkeld, waaronder monitoringdashboards voor patiënten en camera’s, datatabellen, filterinterfaces en meerstapsformulieren/modals.\nRealtime functionaliteit geïmplementeerd, waaronder camerastatusupdates via Server-Sent Events en videocommunicatie via WebRTC.\nKerninfrastructuur van de applicatie ontwikkeld, inclusief routeringrefactor, dark/light mode, Nederlands-Engelse lokalisatie en API-integratie (REST, Strapi).\nNauw samengewerkt met backend developers en designers in een Agile-omgeving om betrouwbare zorginterfaces te leveren.\nOplossingen geïmplementeerd in ziekenhuizen zoals Máxima MC (Eindhoven), UMC Utrecht en UMC Groningen."
+      },
+      "skillsDevelopment": {
+        "title": "Frontend Skills Development",
+        "period": "sep 2018 — sep 2022",
+        "description": "Projecten gemaakt met ReactJS, styled-components, Bootstrap: mijn persoonlijke webpagina, meertalige webpagina over pianolessen en frontend voor een online winkel;\nTechblog gemaakt met VueJS, Intersection Observer API;\nWebsite voor een bezorgbedrijf gemaakt met Angular, Tailwind CSS (alleen visueel gedeelte);\n“Yandex School of Web Interfaces Development”, Frontend student (6 maanden): frontend gemaakt voor interne webapplicatie om automatisch projecten van GitHub te bouwen (git, webpack, Figma naar responsieve CSS/HTML, Javascript, ReactJS, testen, client-side optimalisatie, ESLint, BEM, Typescript);\nTwee online specialisaties in webinterface-ontwikkeling voltooid (Coursera en freeCodeCamp). Geleerd en geoefend met responsive webdesign, semantische en toegankelijke HTML, CSS-animaties, pure HTML5/CSS3/Javascript-webpagina's."
+      },
+      "infoAccountant": {
+        "title": "Software Developer",
+        "period": "sep 2017 — aug 2018",
+        "description": "Deelgenomen aan de ontwikkeling van de nieuwe versie van boekhoudsoftware in C++ voor Windows, de programma-interface verbeterd volgens een nieuw ontwerp, tests geschreven (gtest), code review uitgevoerd."
+      },
+      "abbyy": {
+        "title": "Software Test Engineer",
+        "period": "apr 2012 — aug 2017",
+        "description": "Testen van SDK voor optische tekenherkenning (Windows, C++).\nVolledig testtraject van SDK-toepassingen: testplanontwikkeling en prioritering, voorbereiding van testdata en testomgeving, uitvoering van tests, analyse van testresultaten en bugrapportage, testautomatisering en regressietests, rapportage.\nFunctionele, verkennende en load tests; ontwikkeling en ondersteuning van testtools, code review.\nRelease management, communicatie met ontwikkelaars en analisten, werken volgens Agile-methodologieën."
+      }
+    }
   },
   "EducationPage": {
     "title": "Opleiding"
