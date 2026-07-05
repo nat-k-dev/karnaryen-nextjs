@@ -128,7 +128,44 @@
     }
   },
   "EducationPage": {
-    "title": "Education"
+    "title": "Education",
+    "coursesTitle": "Courses & Certificates",
+    "main": {
+      "mai": {
+        "institution": "Moscow Aviation Institute (State University of Aerospace Technologies)",
+        "degree": "Engineer's degree, Computer Science"
+      }
+    },
+    "courses": {
+      "udemyClaudeCode": {
+        "org": "Udemy",
+        "name": "Claude Code - The Practical Guide"
+      },
+      "udemyAngular": {
+        "org": "Udemy",
+        "name": "Angular - The Complete Guide (2025 Edition)"
+      },
+      "duo": {
+        "org": "Dienst Uitvoering Onderwijs (DUO)",
+        "name": "Inburgeringsdiploma A2"
+      },
+      "yandex": {
+        "org": "Yandex School of Web Interfaces Development",
+        "name": "6-month on-site program in web app development"
+      },
+      "freeCodeCamp": {
+        "org": "freeCodeCamp",
+        "name": "Responsive Web Design Certification Program"
+      },
+      "mipt": {
+        "org": "Moscow Institute of Physics and Technology, Yandex, E-Learning Development Fund",
+        "name": "Web interfaces development: HTML, CSS and JavaScript Specialization"
+      },
+      "gasq": {
+        "org": "GASQ Service GmbH",
+        "name": "ISTQB Certified Tester (Foundation Level)"
+      }
+    }
   },
   "ContactsPage": {
     "title": "Contacts",

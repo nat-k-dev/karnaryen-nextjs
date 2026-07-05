@@ -128,7 +128,44 @@
     }
   },
   "EducationPage": {
-    "title": "Opleiding"
+    "title": "Opleiding",
+    "coursesTitle": "Cursussen en Certificaten",
+    "main": {
+      "mai": {
+        "institution": "Moskou Luchtvaartinstituut (Staatsuniversiteit voor Lucht- en Ruimtevaarttechnologie)",
+        "degree": "Ingenieursdiploma, Informatica"
+      }
+    },
+    "courses": {
+      "udemyClaudeCode": {
+        "org": "Udemy",
+        "name": "Claude Code - The Practical Guide"
+      },
+      "udemyAngular": {
+        "org": "Udemy",
+        "name": "Angular - The Complete Guide (2025 Edition)"
+      },
+      "duo": {
+        "org": "Dienst Uitvoering Onderwijs (DUO)",
+        "name": "Inburgeringsdiploma A2"
+      },
+      "yandex": {
+        "org": "Yandex School of Web Interfaces Development",
+        "name": "Voltijds programma van 6 maanden in webapplicatieontwikkeling"
+      },
+      "freeCodeCamp": {
+        "org": "freeCodeCamp",
+        "name": "Responsive Web Design-certificeringsprogramma"
+      },
+      "mipt": {
+        "org": "Moskou Instituut voor Natuurkunde en Technologie, Yandex, E-Learning Development Fund",
+        "name": "Webinterface-ontwikkeling: HTML, CSS en JavaScript-specialisatie"
+      },
+      "gasq": {
+        "org": "GASQ Service GmbH",
+        "name": "ISTQB Certified Tester (Foundation Level)"
+      }
+    }
   },
   "ContactsPage": {
     "title": "Contact",
