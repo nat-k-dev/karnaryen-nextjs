@@ -1,0 +1,31 @@
+{
+  "Header": {
+    "name": "Natalia Karaseva",
+    "navLabel": "Main navigation",
+    "nav": {
+      "about": "About me",
+      "projects": "Projects",
+      "experience": "Experience",
+      "education": "Education",
+      "contacts": "Contacts"
+    },
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "LocaleSwitcher": {
+    "switchTo": "Switch language to {language}",
+    "en": "English",
+    "nl": "Dutch"
+  },
+  "ThemeToggle": {
+    "label": "Toggle theme"
+  },
+  "HomePage": {
+    "title": "Natalia Karaseva",
+    "subtitle": "Frontend developer",
+    "projects": {
+      "title": "Projects",
+      "note": "This section uses bg-surface-soft (mint-100 in light mode)"
+    }
+  }
+}
