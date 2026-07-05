@@ -1,21 +1,37 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
+import { TechStack } from '@/components/tech-stack';
+import mePhoto from '@/public/me.webp';
+
 export default function Home() {
-  const t = useTranslations('HomePage');
+  const t = useTranslations('AboutPage');
 
   return (
-    <main>
-      <section className="flex min-h-[60vh] flex-col items-center justify-center gap-4 p-8 bg-background">
-        <h1 className="text-4xl font-semibold text-foreground">{t('title')}</h1>
-        <p className="text-muted-foreground">{t('subtitle')}</p>
+    <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:py-16">
+      <section className="flex flex-col items-center gap-8 lg:flex-row lg:gap-14">
+        <div className="flex shrink-0 flex-col items-center gap-4">
+          <Image
+            src={mePhoto}
+            alt={t('photoAlt')}
+            priority
+            placeholder="blur"
+            sizes="(min-width: 640px) 16rem, 13rem"
+            className="size-52 rounded-full object-cover sm:size-64"
+          />
+          <h1 className="text-2xl font-semibold text-foreground">{t('role')}</h1>
+        </div>
+        <div className="space-y-4 leading-relaxed text-muted-foreground">
+          <p>{t('intro1')}</p>
+          <p>{t('intro2')}</p>
+        </div>
       </section>
 
-      <section
-        id="projects"
-        className="flex min-h-[40vh] flex-col items-center justify-center gap-4 bg-surface-soft p-8"
-      >
-        <h2 className="text-2xl font-semibold text-foreground">{t('projects.title')}</h2>
-        <p className="text-muted-foreground">{t('projects.note')}</p>
+      <section className="mt-14 lg:mt-20">
+        <h2 className="text-center text-2xl font-semibold text-foreground">
+          {t('techStackTitle')}
+        </h2>
+        <TechStack className="mt-8" />
       </section>
     </main>
   );

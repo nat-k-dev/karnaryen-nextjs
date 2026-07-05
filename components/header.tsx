@@ -3,6 +3,7 @@
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -12,16 +13,19 @@ import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { key: 'about', href: '#about' },
-  { key: 'projects', href: '#projects' },
-  { key: 'experience', href: '#experience' },
-  { key: 'education', href: '#education' },
-  { key: 'contacts', href: '#contacts' },
+  { key: 'about', href: '/' },
+  { key: 'projects', href: '/projects' },
+  { key: 'experience', href: '/experience' },
+  { key: 'education', href: '/education' },
+  { key: 'contacts', href: '/contacts' },
 ] as const;
 
 export function Header() {
   const t = useTranslations('Header');
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const isActive = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
@@ -44,13 +48,17 @@ export function Header() {
 
         <nav aria-label={t('navLabel')} className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.key}
               href={item.href}
-              className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }))}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+              className={cn(
+                buttonVariants({ variant: 'ghost', size: 'sm' }),
+                isActive(item.href) && 'bg-muted text-foreground',
+              )}
             >
               {t(`nav.${item.key}`)}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -75,16 +83,18 @@ export function Header() {
           <ul className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 sm:px-6">
             {navItems.map((item) => (
               <li key={item.key}>
-                <a
+                <Link
                   href={item.href}
+                  aria-current={isActive(item.href) ? 'page' : undefined}
                   className={cn(
                     buttonVariants({ variant: 'ghost' }),
                     'w-full justify-start text-base',
+                    isActive(item.href) && 'bg-muted text-foreground',
                   )}
                   onClick={() => setMenuOpen(false)}
                 >
                   {t(`nav.${item.key}`)}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

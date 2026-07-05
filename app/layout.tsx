@@ -12,7 +12,10 @@ import { cn } from '@/lib/utils';
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: 'Natalia Karaseva — Frontend Developer',
+  title: {
+    default: 'Natalia Karaseva — Frontend Developer',
+    template: '%s — Natalia Karaseva',
+  },
   description: 'Portfolio of Natalia Karaseva.',
 };
 
